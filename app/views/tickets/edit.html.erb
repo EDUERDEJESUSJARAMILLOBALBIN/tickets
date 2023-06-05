@@ -1,3 +1,29 @@
+<style>
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1963AE ;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  text-decoration: none;
+}
+
+.button-link:hover {
+  background-color: #45a049;
+   text-decoration: none;
+   color:white;
+   
+}
+
+.button-link:active {
+  background-color: #3e8e41;
+   text-decoration: none;
+   color:white;
+}
+
+</style>
 <h1>Editing ticket</h1>
 
 <%= render "form", ticket: @ticket %>
@@ -5,6 +31,6 @@
 <br>
 
 <div>
-  <%= link_to "Show this ticket", @ticket %> |
-  <%= link_to "Back to tickets", tickets_path %>
+  <%= link_to "Show this ticket", @ticket ,class:'button-link'%> 
+  <%= link_to "Back to tickets", tickets_path ,class:'button-link'%>
 </div>

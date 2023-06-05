@@ -1,8 +1,18 @@
-	  <tr>
+
+    <tr>
 			<td><%= ticket.day %></td>
 			<td><%= ticket.date %></td>
-			<td><%= ticket.remaining %></td>
+			<td>
+      <span class="badge bg-primary">
+      <%= ticket.remaining %>
+      </span>
+      </td>
 			<td><%= ticket.description_remaining %></td>
 			<td><%= ticket.branch_detail %></td>
-      <td><%= link_to "Show this ticket", ticket %></td>
+      <td><span class="badge bg-success">
+      <%= link_to "Show this ticket", ticket %>
+      </span>
+      </td>
 		</tr>
+
+

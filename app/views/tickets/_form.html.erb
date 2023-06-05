@@ -1,6 +1,6 @@
-<%= form_with(model: ticket) do |form| %>
+<%= form_with(model: ticket, class: 'form') do |form| %>
   <% if ticket.errors.any? %>
-    <div style="color: red">
+    <div class="alert alert-danger">
       <h2><%= pluralize(ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
 
       <ul>
@@ -11,32 +11,33 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :day, style: "display: block" %>
-    <%= form.text_field :day %>
+  <div class="form-group">
+    <%= form.label :day, class: 'form-label' %>
+    <%= form.text_field :day, class: 'form-control' %>
   </div>
 
-  <div>
-    <%= form.label :date, style: "display: block" %>
-    <%= form.date_field :date %>
+  <div class="form-group">
+    <%= form.label :date, class: 'form-label' %>
+    <%= form.date_field :date, class: 'form-control' %>
   </div>
 
-  <div>
-    <%= form.label :remaining, style: "display: block" %>
-    <%= form.text_field :remaining %>
+  <div class="form-group">
+    <%= form.label :remaining, class: 'form-label' %>
+    <%= form.text_field :remaining, class: 'form-control' %>
   </div>
 
-  <div>
-    <%= form.label :description_remaining, style: "display: block" %>
-    <%= form.text_area :description_remaining %>
+  <div class="form-group">
+    <%= form.label :description_remaining, class: 'form-label' %>
+    <%= form.text_area :description_remaining, class: 'form-control' %>
   </div>
 
-  <div>
-    <%= form.label :branch_detail, style: "display: block" %>
-    <%= form.text_area :branch_detail %>
+  <div class="form-group">
+    <%= form.label :branch_detail, class: 'form-label' %>
+    <%= form.text_area :branch_detail, class: 'form-control' %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit 'Save', class: 'btn btn-primary' %>
   </div>
 <% end %>
+
