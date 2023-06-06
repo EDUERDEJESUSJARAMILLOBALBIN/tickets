@@ -67,6 +67,6 @@ class TicketsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ticket_params
-      params.require(:ticket).permit(:day,:spring, :date, :remaining,:logged_time,:status, :description_remaining, :branch_detail)
+      params.require(:ticket).permit(:day, :date, :remaining, :description_remaining, :branch_detail)
     end
 end

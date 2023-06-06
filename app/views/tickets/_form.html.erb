@@ -16,11 +16,6 @@
     <%= form.text_field :day, class: 'form-control' %>
   </div>
 
-    <div class="form-group">
-    <%= form.label :spring, class: 'form-label' %>
-    <%= form.text_field :spring, class: 'form-control' %>
-  </div>
-
   <div class="form-group">
     <%= form.label :date, class: 'form-label' %>
     <%= form.date_field :date, class: 'form-control' %>
@@ -29,18 +24,6 @@
   <div class="form-group">
     <%= form.label :remaining, class: 'form-label' %>
     <%= form.text_field :remaining, class: 'form-control' %>
-  </div>
-
-   <div class="form-group">
-    <%= form.label :logged_time, class: 'form-label' %>
-    <%= form.text_field :logged_time, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :status, class: 'form-label' %>
-    <%= form.select :status, options_for_select(['On hold','
-Initialized', 'Finished']), { include_blank: true }, class: 'form-select' %>
-
   </div>
 
   <div class="form-group">

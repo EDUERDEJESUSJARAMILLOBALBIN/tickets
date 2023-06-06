@@ -17,11 +17,8 @@ class TicketsTest < ApplicationSystemTestCase
     fill_in "Branch detail", with: @ticket.branch_detail
     fill_in "Date", with: @ticket.date
     fill_in "Day", with: @ticket.day
-    fill_in "Spring", with: @ticket.spring
     fill_in "Description remaining", with: @ticket.description_remaining
     fill_in "Remaining", with: @ticket.remaining
-    fill_in "Logged_time", with: @ticket.logged_time
-    fill_in "Status", with: @ticket.status
     click_on "Create Ticket"
 
     assert_text "Ticket was successfully created"
@@ -35,11 +32,8 @@ class TicketsTest < ApplicationSystemTestCase
     fill_in "Branch detail", with: @ticket.branch_detail
     fill_in "Date", with: @ticket.date
     fill_in "Day", with: @ticket.day
-    fill_in "Spring", with: @ticket.spring
     fill_in "Description remaining", with: @ticket.description_remaining
     fill_in "Remaining", with: @ticket.remaining
-    fill_in "Logged_time", with: @ticket.logged_time
-    fill_in "Status", with: @ticket.status
     click_on "Update Ticket"
 
     assert_text "Ticket was successfully updated"
