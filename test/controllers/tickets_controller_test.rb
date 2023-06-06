@@ -17,7 +17,7 @@ class TicketsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create ticket" do
     assert_difference("Ticket.count") do
-      post tickets_url, params: { ticket: { branch_detail: @ticket.branch_detail, date: @ticket.date, day: @ticket.day, description_remaining: @ticket.description_remaining, remaining: @ticket.remaining } }
+      post tickets_url, params: { ticket: { branch_detail: @ticket.branch_detail, date: @ticket.date, day: @ticket.day,day: @ticket.spring, description_remaining: @ticket.description_remaining, remaining: @ticket.remaining,logged_time: @ticket.logged_time,status: @ticket.status } }
     end
 
     assert_redirected_to ticket_url(Ticket.last)
@@ -34,7 +34,7 @@ class TicketsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update ticket" do
-    patch ticket_url(@ticket), params: { ticket: { branch_detail: @ticket.branch_detail, date: @ticket.date, day: @ticket.day, description_remaining: @ticket.description_remaining, remaining: @ticket.remaining } }
+    patch ticket_url(@ticket), params: { ticket: { branch_detail: @ticket.branch_detail, date: @ticket.date, day: @ticket.day,spring: @ticket.spring, description_remaining: @ticket.description_remaining, remaining: @ticket.remaining,logged_time: @ticket.logged_time, status: @ticket.status } }
     assert_redirected_to ticket_url(@ticket)
   end
 
