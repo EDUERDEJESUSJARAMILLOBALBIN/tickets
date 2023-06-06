@@ -12,25 +12,23 @@
       <%= ticket.logged_time %>
       </span></td>
       <td>
-        <%if ticket.status == 'On hold' %>
-          <span class="badge bg-danger">
+       <% if ticket.status == 'On hold' %>
+        <span class="badge bg-danger">
           <%= ticket.status %>
-          </span>
-        <%elsif ticket.status == 'Initialized'%>
-         <span class="badge bg-warning">
-          <%= ticket.status %>
-          </span>
-
-        <%elsif ticket.status == 'Finished'%>
-         <span class="badge bg-successs">
-          <%= ticket.status %>
-          </span>
-
-        <%else%>
+        </span>
+      <% elsif ticket.status == 'Initialized' %>
         <span class="badge bg-warning">
           <%= ticket.status %>
-          </span>
-        <%end%>
+        </span>
+      <% elsif ticket.status == 'Finished' %>
+        <span class="badge bg-success">
+          <%= ticket.status %>
+        </span>
+      <% else %>
+        <span class="badge bg-warning">
+          <%= ticket.status %>
+        </span>
+      <% end %>
 			<td><%= ticket.description_remaining %></td>
       </td>
       
